@@ -9,14 +9,14 @@ let gulp = require('gulp'),
 
 
 gulp.task('scripts', function(){
-	return gulp.src(['node_modules/slick-carousel/slick/slick.js', 'node_modules/magnific-popup/dist/jquery.magnific-popup.js'])
+	return gulp.src(['vendor/slick/slick.js', ])
 			.pipe(concat('libs.min.js'))
 			.pipe(uglify())
 			.pipe(gulp.dest('app/js'))
 });
 
 gulp.task('style', function(){
-	return gulp.src(['node_modules/normalize.css/normalize.css', 'node_modules/slick-carousel/slick/slick.css', 'node_modules/magnific-popup/dist/jquery.magnific-popup.css'])
+	return gulp.src(['vendor/normalize.css', 'vendor/slick/slick.css', ])
 			.pipe(concat('libs.css'))
 			.pipe()
 			.pipe(gulp.dest('app/css'))
